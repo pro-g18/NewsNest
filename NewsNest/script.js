@@ -9,7 +9,7 @@ function reload(){
 }
 
 async function fetchNews(query){
-    const res = await fetch(`${url}${query}&apiKey=${api_key}`);
+    const res = await fetch(`${url}${query}&from=2024-03-20&sortBy=publishedAt&apiKey=${api_key}`);
     const data=await res.json();
     bindData(data.articles);
     // console.log(data)
